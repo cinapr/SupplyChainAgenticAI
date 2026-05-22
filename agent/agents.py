@@ -1,5 +1,5 @@
 from langchain_ollama import OllamaLLM
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langgraph.graph import StateGraph, END
 from typing import TypedDict, List
 from supply_data import generate_supply_chain_data, get_chain_summary
