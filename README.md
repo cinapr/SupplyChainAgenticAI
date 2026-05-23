@@ -124,19 +124,35 @@ cd agent
 python main.py
 ```
 
+![Simulation Demo](Documentation/1 agent-running-main.py/main.py.png)
+
 ### Running the Statistical Analysis
 The raw AnyLogic CSV data is already provided in the simulation/results/ folder.
 
+Normal Distruption:
+![Simulation Demo](Documentation/2 AnyLogic/Running_NormalDistruption.gif)
+
+Extreme Distruption:
+![Simulation Demo](Documentation/2 AnyLogic/Running_SevereSimulation.gif)
+
+
 ### Running the Statistical Analysis
+
 ```bash
 # 1. Generate the plots and recovery metrics using Python:
 cd simulation
 python analysis.py
+```
 
+![Simulation Result](Documentation/3 analysis-python-result/disruption_scenarios.png)
+![Simulation Demo](Documentation/3 analysis-python-result/Running-screenshot.png)
+
+```bash
 # 2. Run the statistical tests in R:
 Open analysis.R in RStudio, set your working directory to the simulation folder, and execute the script to view the linear model output.
 ```
 
+![Simulation Demo](Documentation/4 analysis-R-result/Running-R.gif)
 
 
 
@@ -144,6 +160,8 @@ Open analysis.R in RStudio, set your working directory to the simulation folder,
 ## Result & Documentation
 
 The running result had been saved to: `\Documentation`
+
+[📄 Read the Full Academic Simulation Report (PDF)](Documentation/Supply_Chain_Resilience_Report.pdf)
 
 
 
