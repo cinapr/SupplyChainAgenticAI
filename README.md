@@ -35,6 +35,7 @@ It is built specifically to explore autonomous adaptation frameworks relevant to
 
 
 
+
 ## Project Architecture
 
 How the data flow? ```Monitor Agent → Replenishment Agent → Report Agent```
@@ -58,6 +59,8 @@ A physical simulation of a 3-node food supply network (Farms → Warehouse → D
 * **AnyLogic Physics:** Models the physical reality of inventory flow, queue bottlenecks, and transit delays. We simulate normal operations, introduce a production crash at time=30, and trigger automated backup recovery at time=45.
 * **Python Aggregation:** Reads the exported simulation data, aligns the time-series variables, and plots the inventory curves to visualize the impact of different disruption severities.
 * **R Statistical Modeling:** Applies Kruskal-Wallis tests and linear models to the simulation output to statistically quantify the relationship between disruption severity and recovery time.
+
+
 
 
 
@@ -91,10 +94,15 @@ supply-chain-resilience/
 ```
 
 
+
+
+
 ## Scenarios
 
 - Normal operations: baseline monitoring
 - Climate disruption: Farm_A supply cut 60%, system adapts
+
+
 
 
 
@@ -106,6 +114,8 @@ supply-chain-resilience/
 - R and RStudio
 - AnyLogic Personal Learning Edition (to view or modify the .alp file)
 - Ollama installed locally
+
+
 
 
 
@@ -124,16 +134,20 @@ cd agent
 python main.py
 ```
 
-![Simulation Demo](Documentation/1 agent-running-main.py/main.py.png)
+![Simulation Demo](Documentation/1%20agent-running-main.py/main.py.png)
+
 
 ### Running the Statistical Analysis
 The raw AnyLogic CSV data is already provided in the simulation/results/ folder.
 
-Normal Distruption:
-![Simulation Demo](Documentation/2 AnyLogic/Running_NormalDistruption.gif)
+Normal Disruption:
+![Simulation Demo](Documentation/2%20AnyLogic/Running_NormalDistruption.gif)
 
-Extreme Distruption:
-![Simulation Demo](Documentation/2 AnyLogic/Running_SevereSimulation.gif)
+Extreme Disruption:
+![Simulation Demo](Documentation/2%20AnyLogic/Running_SevereSimulation.gif)
+
+
+
 
 
 ### Running the Statistical Analysis
@@ -144,15 +158,16 @@ cd simulation
 python analysis.py
 ```
 
-![Simulation Result](Documentation/3 analysis-python-result/disruption_scenarios.png)
-![Simulation Demo](Documentation/3 analysis-python-result/Running-screenshot.png)
+![Simulation Result](Documentation/3%20analysis-python-result/disruption_scenarios.png)
+![Simulation Demo](Documentation/3%20analysis-python-result/Running-screenshot.png)
 
 ```bash
 # 2. Run the statistical tests in R:
 Open analysis.R in RStudio, set your working directory to the simulation folder, and execute the script to view the linear model output.
 ```
 
-![Simulation Demo](Documentation/4 analysis-R-result/Running-R.gif)
+![Simulation Demo](Documentation/4%20analysis-R-result/Running-R.gif)
+
 
 
 
